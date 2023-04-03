@@ -1,0 +1,11 @@
+@media (max-width: 820px){
+    nav{
+        width: 820px;
+    }
+    img.sharingan:first-child{
+        position: static;
+    }
+    img.sharingan:last-child{
+        position: static;
+    }
+}

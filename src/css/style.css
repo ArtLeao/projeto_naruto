@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+    color: black;
+}
+
+.teste {
+    position: fixed;
+    top: 0;
+    color: white;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+img.sharingan {
+    height: 65px;
+    width: 65px;
+}
+
+img.sharingan:hover {
+    animation-name: animacao;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+img.sharingan:first-child:hover {
+    animation-direction: alternate;
+}
+
+img.sharingan:last-child {
+    position: fixed;
+    right: 0;
+}
+
+img.sharingan:last-child:hover {
+    animation-direction: alternate-reverse;
+}
+
+a {
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:nth-child(2), a:nth-child(3) {
+    border-right: 1px solid white;
+}
+
+a:hover {
+    color: rgb(223, 14, 14);
+}
+
+.carrossel {
+    padding-top: 50px;
+    height: 520px;
+    width: 1280px;
+    position: relative;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+  }
+
+img.seta_voltar {
+    left: 50px;
+}
+
+.imagens{
+    display: flex;
+    padding-left: 10px;
+    overflow-x: hidden;
+}
+
+.imagem{
+    opacity: 0;
+    transition: opacity 2s;
+    height: 520px;
+    width: 1280px;
+    z-index: -1;
+    flex-shrink: 0;
+}
+
+.ativa{
+    opacity: 1;
+}
+
+img.seta_avancar {
+    right: 50px;
+}
+
+.seta_voltar{
+    transform: rotate(180deg);
+}
+
+/* z-index coloca o elemento mais ao fundo da página se tiver numero negativo */
+
+img.seta_voltar, img.seta_avancar {
+    position: absolute;
+    top: 300px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+    filter: invert(1);
+}
+
+footer {
+    width: 100%;
+    background: black;
+    height: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes animacao {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
