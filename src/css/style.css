@@ -25,13 +25,9 @@ img.sharingan {
 
 img.sharingan:hover {
     animation-name: animacao;
-    animation-duration: 0.8s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-img.sharingan:first-child:hover {
-    animation-direction: alternate;
 }
 
 img.sharingan:last-child {
@@ -40,7 +36,7 @@ img.sharingan:last-child {
 }
 
 img.sharingan:last-child:hover {
-    animation-direction: alternate-reverse;
+    animation-direction: reverse;
 }
 
 a {
